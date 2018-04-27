@@ -1,0 +1,20 @@
+<button [routerLink]="['/movies']">Home</button>
+
+<h3>Submit a movie for your review</h3>
+<div>
+  <form (submit)="movieAdd()">
+    Movie Title: <input type="text" name="movie.title" [(ngModel)]="movie.title" /><br>
+    Your name: <input type="text" name="movie.reviewer" [(ngModel)]="movie.reviewer" /><br>
+    Stars: <select name="movie.star" [(ngModel)]="movie.star">
+      <option value=1>1 star</option>
+      <option value=2>2 star</option>
+      <option value=3>3 star</option>
+      <option value=4>4 star</option>
+      <option value=5>5 star</option>
+    </select><br>
+    Your Review: <input type="text" name="movie.review" [(ngModel)]="movie.review" /><br>
+    <input type="submit" value="Submit"/>
+  </form>
+  <button [routerLink]="['/movie']">Cancel</button>
+</div>
+<p>{{error}}</p>

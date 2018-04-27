@@ -1,0 +1,19 @@
+<button [routerLink]="['/movies/new']">Add a new movie</button>
+
+<div>
+  <table>
+      <tr>
+          <th>Movie Title</th>
+          <th>Average Star Rating</th>
+          <th>Avaliable Actions</th>
+      </tr>
+      <tr *ngFor="let x of movies">
+          <td>{{x['title']}}</td>
+          <td></td>
+          <td>
+              <button (click)="readReview(x)" >Read Reviews</button>
+              <button (click)="writeReview(x)" >Write Review</button>
+          </td>
+      </tr>
+  </table>
+</div>
